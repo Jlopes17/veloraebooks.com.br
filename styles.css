@@ -202,7 +202,7 @@ nav {
 /* ===== ABOUT PREVIEW SECTION ===== */
 .about-preview {
     padding: 80px 5%;
-    background: linear-gradient(135deg, rgba(81, 112, 255, 0.05), rgba(255, 145, 77, 0.05));
+    background: var(--color-white);
     text-align: center;
 }
 
@@ -212,10 +212,10 @@ nav {
 }
 
 .about-text {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto 32px auto;
-    font-size: 1.15rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: var(--color-text-light);
 }
 
@@ -223,13 +223,16 @@ nav {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1rem;
     transition: color 0.3s;
     display: inline-block;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 4px;
 }
 
 .learn-more:hover {
     color: #e67a38;
+    border-bottom-color: #e67a38;
 }
 
 /* ===== BENEFITS SECTION ===== */
