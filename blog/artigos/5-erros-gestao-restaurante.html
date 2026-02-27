@@ -9,25 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="artigo-styles.css">
+    
+    <!-- Google Analytics + Events -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FE6QFGK32');
+      
+      function trackEvent(category, action, label) {
+        gtag('event', action, {
+          'event_category': category,
+          'event_label': label
+        });
+      }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo"><a href="../../index.html">V</a></div>
         <ul class="nav-links">
-            <li><a href="../../index.html">Início</a></li>
-            <li><a href="../../ebooks/index.html">Ebooks</a></li>
-            <li><a href="../index.html">Blog</a></li>
-            <li><a href="../../sobre.html">Sobre</a></li>
-            <li><a href="../../contato.html">Contato</a></li>
+            <li><a href="../../index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Inicio')">Início</a></li>
+            <li><a href="../../ebooks/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Ebooks')">Ebooks</a></li>
+            <li><a href="../index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Blog')">Blog</a></li>
+            <li><a href="../../sobre.html" onclick="trackEvent('Navigation', 'click', 'Menu - Sobre')">Sobre</a></li>
+            <li><a href="../../contato.html" onclick="trackEvent('Navigation', 'click', 'Menu - Contato')">Contato</a></li>
         </ul>
     </nav>
 
-    <!-- Article Header -->
     <article class="article">
         <header class="article-header">
             <div class="container-narrow">
-                <a href="../index.html" class="back-link">← Voltar ao Blog</a>
+                <a href="../index.html" class="back-link" onclick="trackEvent('Navigation', 'click', 'Voltar Blog')">← Voltar ao Blog</a>
                 <div class="article-meta">
                     <span class="article-category">Gestão</span>
                     <span class="article-date">10 de Fevereiro, 2026</span>
@@ -38,20 +52,14 @@
             </div>
         </header>
 
-        <!-- Article Hero Image -->
         <div class="article-hero-image">
             <div class="container-narrow">
-                <!-- Placeholder com gradiente laranja (troque por imagem real quando tiver) -->
                 <div class="placeholder-image" style="background: linear-gradient(135deg, #ff914d, #ffa366);">
                     <div class="placeholder-icon">🍽️</div>
                 </div>
-                <!-- Para usar imagem real, comente o bloco acima e descomente abaixo:
-                <img src="../../images/gestao-restaurante.jpg" alt="Gestão de Restaurantes">
-                -->
             </div>
         </div>
 
-        <!-- Article Content -->
         <div class="article-content">
             <div class="container-narrow">
                 <h2>A Dura Realidade</h2>
@@ -197,12 +205,11 @@
                 <div class="article-cta">
                     <h3>Quer Estruturar Sua Gestão?</h3>
                     <p>Nossos ebooks trazem métodos práticos e acessíveis para você organizar seu negócio sem complicação.</p>
-                    <a href="../../ebooks/index.html" class="cta-button">Ver Ebooks</a>
+                    <a href="../../ebooks/index.html" class="cta-button" onclick="trackEvent('CTA', 'click', 'Artigo - Ver Ebooks')">Ver Ebooks</a>
                 </div>
             </div>
         </div>
 
-        <!-- Article Footer -->
         <footer class="article-footer">
             <div class="container-narrow">
                 <div class="author-box">
@@ -216,26 +223,29 @@
                 <div class="share-section">
                     <h4>Compartilhe este artigo:</h4>
                     <div class="share-buttons">
-                        <a href="https://wa.me/?text=5%20Erros%20Fatais%20na%20Gest%C3%A3o%20de%20Restaurantes%20-%20https://veloraebooks.com.br/blog/artigos/5-erros-gestao-restaurante.html" target="_blank" class="share-btn whatsapp">WhatsApp</a>
-                        <a href="mailto:?subject=Artigo%20interessante&body=5%20Erros%20Fatais%20na%20Gest%C3%A3o%20de%20Restaurantes%20-%20https://veloraebooks.com.br/blog/artigos/5-erros-gestao-restaurante.html" class="share-btn email">Email</a>
+                        <a href="https://wa.me/?text=5%20Erros%20Fatais%20na%20Gest%C3%A3o%20de%20Restaurantes%20-%20https://veloraebooks.com.br/blog/artigos/5-erros-gestao-restaurante.html" target="_blank" class="share-btn whatsapp" onclick="trackEvent('Share', 'click', 'WhatsApp - 5 Erros')">WhatsApp</a>
+                        <a href="mailto:?subject=Artigo%20interessante&body=5%20Erros%20Fatais%20na%20Gest%C3%A3o%20de%20Restaurantes%20-%20https://veloraebooks.com.br/blog/artigos/5-erros-gestao-restaurante.html" class="share-btn email" onclick="trackEvent('Share', 'click', 'Email - 5 Erros')">Email</a>
                     </div>
                 </div>
 
                 <div class="back-to-blog">
-                    <a href="../index.html" class="cta-button-secondary">← Voltar ao Blog</a>
+                    <a href="../index.html" class="cta-button-secondary" onclick="trackEvent('Navigation', 'click', 'Footer - Voltar Blog')">← Voltar ao Blog</a>
                 </div>
             </div>
         </footer>
     </article>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; 2026 Velora Ebooks. Todos os direitos reservados.</p>
-        <p><a href="mailto:veloraebooks@gmail.com">veloraebooks@gmail.com</a></p>
+        <p><a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Footer')">veloraebooks@gmail.com</a></p>
         <div class="social-links">
-            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="mailto:veloraebooks@gmail.com">Email</a>
+            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" onclick="trackEvent('Social', 'click', 'Instagram Footer')">Instagram</a>
+            <a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Link')">Email</a>
         </div>
+        <p style="margin-top: 20px; font-size: 12px; color: #737373;">
+            Este site usa cookies para melhorar sua experiência. 
+            <a href="../../politica-privacidade.html" style="text-decoration: underline;">Política de Privacidade</a>
+        </p>
     </footer>
 </body>
 </html>
