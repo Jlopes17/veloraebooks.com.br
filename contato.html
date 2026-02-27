@@ -3,63 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entre em contato com a Velora - Estamos aqui para ajudar">
+    <meta name="description" content="Entre em contato com a Velora Ebooks - Tire suas dúvidas sobre nossos ebooks e gestão empresarial">
     <title>Contato - Velora Ebooks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="contato-styles.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3FE6QFGK32');
-</script>
+    
+    <!-- Google Analytics + Events -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FE6QFGK32');
+      
+      function trackEvent(category, action, label) {
+        gtag('event', action, {
+          'event_category': category,
+          'event_label': label
+        });
+      }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo"><a href="index.html">V</a></div>
         <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="ebooks/index.html">Ebooks</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Inicio')">Início</a></li>
+            <li><a href="ebooks/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Ebooks')">Ebooks</a></li>
+            <li><a href="blog/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Blog')">Blog</a></li>
+            <li><a href="sobre.html" onclick="trackEvent('Navigation', 'click', 'Menu - Sobre')">Sobre</a></li>
             <li><a href="contato.html" class="active">Contato</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Entre em <span class="highlight">Contato</span></h1>
-            <p class="hero-subtitle">Estamos aqui para ajudar! Tire suas dúvidas, envie sugestões ou saiba mais sobre nossos produtos.</p>
+            <p class="hero-subtitle">Estamos aqui para ajudar. Escolha a melhor forma de falar conosco!</p>
         </div>
     </section>
 
-    <!-- Contact Methods Section -->
     <section class="contact-methods">
         <div class="container">
-            <h2 class="section-title">Como Podemos Ajudar?</h2>
             <div class="methods-grid">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_j0qNeicnpfhsZqSSL_0-jXs0njEUJnj-0891fOpj0Jy0fw/viewform" target="_blank" class="method-card highlight-card">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_j0qNeicnpfhsZqSSL_0-jXs0njEUJnj-0891fOpj0Jy0fw/viewform" target="_blank" rel="noopener noreferrer" class="method-card featured" onclick="trackEvent('Contact', 'click', 'Formulario Google')">
                     <div class="method-icon">📝</div>
                     <h3>Formulário de Contato</h3>
-                    <p>Preencha nosso formulário e responderemos em até 24h</p>
-                    <span class="method-cta">Preencher Formulário →</span>
+                    <p>Preencha nosso formulário e retornaremos em até 24 horas</p>
+                    <span class="method-cta">Preencher formulário →</span>
                 </a>
-                
-                <a href="mailto:veloraebooks@gmail.com" class="method-card">
+
+                <a href="mailto:veloraebooks@gmail.com" class="method-card" onclick="trackEvent('Contact', 'click', 'Email Card')">
                     <div class="method-icon">📧</div>
                     <h3>Email Direto</h3>
                     <p>veloraebooks@gmail.com</p>
-                    <span class="method-cta">Enviar Email →</span>
+                    <span class="method-cta">Enviar email →</span>
                 </a>
-                
-                <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" class="method-card">
+
+                <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" class="method-card" onclick="trackEvent('Contact', 'click', 'Instagram Card')">
                     <div class="method-icon">📱</div>
                     <h3>Instagram</h3>
                     <p>@veloraebooks</p>
@@ -69,52 +72,52 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="faq-section">
-        <div class="container-narrow">
+        <div class="container">
             <h2 class="section-title">Perguntas Frequentes</h2>
-            
             <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>⏱️ Qual o prazo de resposta?</h3>
-                    <p>Respondemos em até 24 horas úteis.</p>
+                <div class="faq-card">
+                    <h3>💬 Qual o prazo de resposta?</h3>
+                    <p>Respondemos todas as mensagens em até 24 horas úteis. Se for urgente, envie por email com "URGENTE" no assunto.</p>
                 </div>
-                
-                <div class="faq-item">
-                    <h3>📚 Como comprar um ebook?</h3>
-                    <p>Acesse a página do produto e clique em "Comprar Agora".</p>
+
+                <div class="faq-card">
+                    <h3>📚 Como faço para comprar um ebook?</h3>
+                    <p>Navegue até nosso catálogo, escolha o ebook desejado e clique em "Comprar Agora". Você será redirecionado para o pagamento seguro.</p>
                 </div>
-                
-                <div class="faq-item">
+
+                <div class="faq-card">
                     <h3>💳 Quais formas de pagamento?</h3>
-                    <p>Aceitamos PIX, cartão de crédito e boleto.</p>
+                    <p>Aceitamos cartão de crédito, Pix e boleto bancário. O pagamento é processado de forma segura.</p>
                 </div>
-                
-                <div class="faq-item">
-                    <h3>🔄 Posso trocar ou devolver?</h3>
-                    <p>Sim! Você tem 7 dias de garantia após a compra.</p>
+
+                <div class="faq-card">
+                    <h3>🔄 Posso devolver se não gostar?</h3>
+                    <p>Sim! Oferecemos garantia de 7 dias. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Pronto para transformar seu negócio?</h2>
-            <p>Conheça nossos ebooks e comece hoje mesmo.</p>
-            <a href="ebooks/index.html" class="cta-button">Ver Ebooks</a>
+            <h2>Conheça Nossos Ebooks</h2>
+            <p>Ferramentas práticas para elevar a gestão do seu negócio</p>
+            <a href="ebooks/index.html" class="cta-button" onclick="trackEvent('CTA', 'click', 'Contato - Ver Catalogo')">Ver Catálogo</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Velora Ebooks. Todos os direitos reservados.</p>
-        <p><a href="mailto:veloraebooks@gmail.com">veloraebooks@gmail.com</a></p>
+        <p><a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Footer')">veloraebooks@gmail.com</a></p>
         <div class="social-links">
-            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="mailto:veloraebooks@gmail.com">Email</a>
+            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" onclick="trackEvent('Social', 'click', 'Instagram Footer')">Instagram</a>
+            <a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Link')">Email</a>
         </div>
+        <p style="margin-top: 20px; font-size: 12px; color: #737373;">
+            Este site usa cookies para melhorar sua experiência. 
+            <a href="politica-privacidade.html" style="text-decoration: underline;">Política de Privacidade</a>
+        </p>
     </footer>
 </body>
 </html>
