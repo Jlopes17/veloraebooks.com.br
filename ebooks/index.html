@@ -3,106 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ebooks Velora - Conhecimento prático para transformar seu negócio">
-    <title>Nossos Ebooks - Velora</title>
+    <meta name="description" content="Catálogo de Ebooks Velora - Ferramentas de gestão profissional para seu negócio">
+    <title>Catálogo - Velora Ebooks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3FE6QFGK32');
-</script>
+    
+    <!-- Google Analytics + Events -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FE6QFGK32');
+      
+      function trackEvent(category, action, label) {
+        gtag('event', action, {
+          'event_category': category,
+          'event_label': label
+        });
+      }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo"><a href="../index.html">V</a></div>
         <ul class="nav-links">
-            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Inicio')">Início</a></li>
             <li><a href="index.html" class="active">Ebooks</a></li>
-            <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="../sobre.html">Sobre</a></li>
-            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="../blog/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Blog')">Blog</a></li>
+            <li><a href="../sobre.html" onclick="trackEvent('Navigation', 'click', 'Menu - Sobre')">Sobre</a></li>
+            <li><a href="../contato.html" onclick="trackEvent('Navigation', 'click', 'Menu - Contato')">Contato</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Nossos <span class="highlight">Ebooks</span></h1>
-            <p class="hero-subtitle">Conhecimento prático para empreendedores que buscam resultados reais. Aprenda estratégias comprovadas e transforme seu negócio.</p>
-        </div>
+        <h1>Catálogo de <span class="highlight">Ebooks</span></h1>
+        <p class="subtitle">Ferramentas práticas de gestão para elevar seu negócio</p>
     </section>
 
-    <!-- Products Grid -->
-    <section class="products-section">
-        <div class="container">
-            <div class="products-grid">
-                <!-- Delivery de Sucesso - DISPONÍVEL -->
-                <div class="product-card available">
-                    <div class="product-badge available-badge">Disponível Agora</div>
-                    <div class="product-icon">📱</div>
-                    <h3>Delivery de Sucesso</h3>
-                    <p class="product-description">Estratégias completas para dominar o mercado de delivery e aumentar seus lucros em 90 dias.</p>
-                    <div class="product-details">
-                        <span class="product-category">Restaurantes & Bares</span>
-                        <span class="product-price">R$ 97,00</span>
-                    </div>
-                    <a href="deliverydesucesso/index.html" class="product-button">Ver Detalhes</a>
+    <section class="catalog">
+        <div class="catalog-grid">
+            <div class="product-card available">
+                <div class="product-badge">✅ Disponível</div>
+                <div class="product-icon">📱</div>
+                <h2>Delivery de Sucesso</h2>
+                <p class="product-description">Guia completo para estruturar, organizar e escalar seu negócio de delivery. Estratégias práticas para aumentar lucros e otimizar operações.</p>
+                
+                <div class="product-highlights">
+                    <div class="highlight-item">✓ Gestão de cardápio</div>
+                    <div class="highlight-item">✓ Controle financeiro</div>
+                    <div class="highlight-item">✓ Marketing digital</div>
+                    <div class="highlight-item">✓ Operação eficiente</div>
                 </div>
 
-                <!-- Marketing Digital - EM BREVE -->
-                <div class="product-card coming-soon">
-                    <div class="product-badge soon-badge">Em Breve</div>
-                    <div class="product-icon">💡</div>
-                    <h3>Marketing Digital</h3>
-                    <p class="product-description">Aprenda a criar campanhas que convertem e atraem clientes qualificados para seu negócio.</p>
-                    <div class="product-details">
-                        <span class="product-category">Marketing & Vendas</span>
-                        <span class="product-price">R$ 87,00</span>
-                    </div>
-                    <button class="product-button disabled" disabled>Em Breve</button>
+                <div class="product-price">
+                    <span class="price-label">Investimento:</span>
+                    <span class="price-value">R$ 97,00</span>
                 </div>
 
-                <!-- Gestão Financeira - EM BREVE -->
-                <div class="product-card coming-soon">
-                    <div class="product-badge soon-badge">Em Breve</div>
-                    <div class="product-icon">📊</div>
-                    <h3>Gestão Financeira</h3>
-                    <p class="product-description">Controle total das suas finanças com métodos práticos e ferramentas essenciais.</p>
-                    <div class="product-details">
-                        <span class="product-category">Finanças & Gestão</span>
-                        <span class="product-price">R$ 77,00</span>
-                    </div>
-                    <button class="product-button disabled" disabled>Em Breve</button>
+                <div class="product-actions">
+                    <a href="deliverydesucesso/index.html" class="btn-primary" onclick="trackEvent('Product', 'click', 'Ver Detalhes - Delivery')">Ver Detalhes</a>
+                    <a href="deliverydesucesso/index.html" class="btn-secondary" onclick="trackEvent('CTA', 'click', 'Catalogo - Comprar Delivery')">Comprar Agora</a>
+                </div>
+            </div>
+
+            <div class="product-card coming-soon">
+                <div class="product-badge soon">🚀 Em Breve</div>
+                <div class="product-icon">💡</div>
+                <h2>Marketing Digital Eficaz</h2>
+                <p class="product-description">Aprenda a criar campanhas que convertem e atraem clientes qualificados para seu negócio, mesmo com orçamento limitado.</p>
+                
+                <div class="product-highlights">
+                    <div class="highlight-item">✓ Redes sociais</div>
+                    <div class="highlight-item">✓ Google Ads</div>
+                    <div class="highlight-item">✓ WhatsApp Business</div>
+                    <div class="highlight-item">✓ Conversão</div>
+                </div>
+
+                <div class="product-price">
+                    <span class="price-label">Investimento:</span>
+                    <span class="price-value">R$ 87,00</span>
+                </div>
+
+                <div class="product-actions">
+                    <button class="btn-disabled" disabled>Em Breve</button>
+                </div>
+            </div>
+
+            <div class="product-card coming-soon">
+                <div class="product-badge soon">🚀 Em Breve</div>
+                <div class="product-icon">📊</div>
+                <h2>Gestão Financeira Descomplicada</h2>
+                <p class="product-description">Controle total das suas finanças com métodos práticos e ferramentas essenciais. Fluxo de caixa, precificação e muito mais.</p>
+                
+                <div class="product-highlights">
+                    <div class="highlight-item">✓ Fluxo de caixa</div>
+                    <div class="highlight-item">✓ Precificação</div>
+                    <div class="highlight-item">✓ Indicadores</div>
+                    <div class="highlight-item">✓ Planilhas prontas</div>
+                </div>
+
+                <div class="product-price">
+                    <span class="price-label">Investimento:</span>
+                    <span class="price-value">R$ 77,00</span>
+                </div>
+
+                <div class="product-actions">
+                    <button class="btn-disabled" disabled>Em Breve</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Quer ficar por dentro dos próximos lançamentos?</h2>
-            <p>Cadastre seu e-mail e seja o primeiro a saber quando novos ebooks forem lançados.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_j0qNeicnpfhsZqSSL_0-jXs0njEUJnj-0891fOpj0Jy0fw/viewform" target="_blank" rel="noopener noreferrer" class="cta-button">Entre em contato</a>
+            <h2>Quer receber novidades sobre novos ebooks?</h2>
+            <p>Cadastre-se e seja o primeiro a saber quando lançarmos novos produtos</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_j0qNeicnpfhsZqSSL_0-jXs0njEUJnj-0891fOpj0Jy0fw/viewform" target="_blank" rel="noopener noreferrer" class="cta-button" onclick="trackEvent('CTA', 'click', 'Catalogo - Newsletter')">Cadastrar Agora</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Velora Ebooks. Todos os direitos reservados.</p>
-        <p><a href="mailto:veloraebooks@gmail.com">veloraebooks@gmail.com</a></p>
+        <p><a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Footer')">veloraebooks@gmail.com</a></p>
         <div class="social-links">
-            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="mailto:veloraebooks@gmail.com">Email</a>
+            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" onclick="trackEvent('Social', 'click', 'Instagram Footer')">Instagram</a>
+            <a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Link')">Email</a>
         </div>
+        <p style="margin-top: 20px; font-size: 12px; color: #737373;">
+            Este site usa cookies para melhorar sua experiência. 
+            <a href="../politica-privacidade.html" style="text-decoration: underline;">Política de Privacidade</a>
+        </p>
     </footer>
 </body>
 </html>
