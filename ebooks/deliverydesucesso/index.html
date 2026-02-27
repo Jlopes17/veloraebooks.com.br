@@ -3,266 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Delivery de Sucesso - Transforme seu delivery em uma operação lucrativa, organizada e amada pelos clientes">
+    <meta name="description" content="Delivery de Sucesso - Guia completo para estruturar e escalar seu negócio de delivery">
     <title>Delivery de Sucesso - Velora Ebooks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3FE6QFGK32');
-</script>
+    
+    <!-- Google Analytics + Events -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FE6QFGK32');
+      
+      function trackEvent(category, action, label) {
+        gtag('event', action, {
+          'event_category': category,
+          'event_label': label
+        });
+      }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
-        <div class="logo">
-            <a href="../../index.html">V</a>
-        </div>
-    <ul class="nav-links">
-        <li><a href="../../index.html">Início</a></li>
-        <li><a href="../index.html">Ebooks</a></li>
-        <li><a href="../../blog/index.html">Blog</a></li>
-        <li><a href="../../sobre.html">Sobre</a></li>
-        <li><a href="../../contato.html">Contato</a></li>
-    </ul>
+        <div class="logo"><a href="../../index.html">V</a></div>
+        <ul class="nav-links">
+            <li><a href="../../index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Inicio')">Início</a></li>
+            <li><a href="../index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Ebooks')">Ebooks</a></li>
+            <li><a href="../../blog/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Blog')">Blog</a></li>
+            <li><a href="../../sobre.html" onclick="trackEvent('Navigation', 'click', 'Menu - Sobre')">Sobre</a></li>
+            <li><a href="../../contato.html" onclick="trackEvent('Navigation', 'click', 'Menu - Contato')">Contato</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1><span class="green-highlight">Bares e Restaurantes:</span> Criando um Delivery de Sucesso</h1>
-            <p>Transforme <strong>seu delivery em uma operação lucrativa, organizada e amada</strong> pelos clientes, sem depender de "jeitinho" ou consultoria cara.</p>
-            <a href="#" class="cta-button">Quero transformar meu delivery agora por R$97</a>
-        </div>
-        <div class="hero-image">
-            <img src="https://veloraebooks.com.br/wp-content/uploads/2025/12/dbhero-velora-desk-w1-1024x646.webp" alt="Delivery de Sucesso">
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="problem-content">
-            <h2>Delivery bom não é o que vende muito. <strong>É o que dá lucro todo dia.</strong></h2>
-            <p>Você sabe como é: o telefone toca, o app apita, o motoboy atrasa, o cliente reclama que veio frio. No fim do mês, entra um monte de pedido… e sobra quase nada.</p>
-            <p>Esse e-book é pra mudar isso.</p>
-            
-            <ul class="benefits-list">
-                <li>▸ Sem linguagem complicada.</li>
-                <li>▸ Sem papo de gestão de MBA.</li>
-                <li>▸ Sem planilha de 40 colunas.</li>
-                <li>▸ Só o que funciona e cabe na sua rotina.</li>
-            </ul>
-            
-            <a href="#" class="cta-button">R$ 97 | Quero transformar meu delivery agora</a>
-        </div>
-    </section>
-
-    <!-- Target Audience -->
-    <section class="target-section">
-        <h2 class="section-title">Para <strong>quem</strong> é</h2>
-        
-        <div class="target-intro">
-            <p>Se você abriu delivery na correria e agora ele "funciona, <strong>mas não dá lucro",</strong> é pra você.</p>
-            <p>Se todo mês você jura que vai organizar melhor e nunca dá tempo, também é pra você. E se você sente que <strong>poderia vender mais, mas não sabe por onde começar, pronto.</strong> Achou.</p>
-            <p><strong>Basicamente, serve especialmente para quem:</strong></p>
-        </div>
-
-        <ul class="check-list">
-            <li>✓ Começou o delivery "no improviso" e quer profissionalizar a operação;</li>
-            <li>✓ Enfrenta atrasos, embalagem ruim, retrabalho ou avaliações caindo;</li>
-            <li>✓ Quer aumentar ticket, recorrência e satisfação sem complicar o dia a dia;</li>
-            <li>✓ Prefere agir rápido e quer um passo a passo prático, sem linguagem técnica.</li>
-        </ul>
-        
-        <div class="target-cta">
-            <a href="#" class="cta-button">Quero um delivery de sucesso</a>
-        </div>
-    </section>
-
-    <!-- What You Get -->
-    <section class="benefits-section">
-        <h2 class="section-title">O que você vai receber <span class="subtitle">(e por que é diferente)</span></h2>
-        <p class="section-subtitle">Um guia mão na massa, direto ao ponto, que mostra o que fazer e como fazer para seu delivery dar lucro de verdade. Você vai aprender a:</p>
-        
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">🚪</div>
-                <p><strong>Estruturar processos chave</strong> do pedido até a porta sem gargalos;</p>
+    <section class="product-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html" onclick="trackEvent('Navigation', 'click', 'Breadcrumb - Home')">Início</a> > 
+                <a href="../index.html" onclick="trackEvent('Navigation', 'click', 'Breadcrumb - Ebooks')">Ebooks</a> > 
+                <span>Delivery de Sucesso</span>
             </div>
             
-            <div class="benefit-card">
-                <div class="benefit-icon">🏅</div>
-                <p>Criar <strong>padrões de qualidade que o cliente vai lembrar</strong> (tempo-alvo, checklist, apresentação do produto e embalagem);</p>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">💰</div>
-                <p><strong>Reduzir custos</strong> sem perder padrão e sem precisar virar contador;</p>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">👥</div>
-                <p><strong>Fidelizar clientes</strong> sem desconto (recorrência, pós-venda, avaliação e recuperação de carrinho);</p>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">🔧</div>
-                <p>Usar <strong>ferramentas simples</strong> e indicadores básicos para decidir melhor (sem planilhas monstruosas)</p>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">🎯</div>
-                <p>Nada de teoria solta: é <strong>gestão acessível</strong> aplicada à realidade de quem tem pressa.</p>
-            </div>
-        </div>
-        
-        <div class="section-cta">
-            <a href="#" class="cta-button">Quero aplicar isso no meu negócio</a>
-        </div>
-    </section>
-
-    <!-- Daily Impact -->
-    <section class="impact-section">
-        <h2 class="section-title">O que muda no seu dia a dia <span class="subtitle">(benefícios práticos)</span></h2>
-        <p>Depois de aplicar o e-book, você começa a respirar. Sabe exatamente quem faz o quê. Entrega rápido, sem retrabalho. E, o melhor, <strong>vê dinheiro real sobrando no fim da semana.</strong></p>
-        <p>Não tem mágica, tem método simples. E funciona.</p>
-        <a href="#" class="cta-button">Quero esse resultado</a>
-    </section>
-
-    <!-- Table of Contents -->
-    <section class="toc-section">
-        <h2 class="section-title">O que tem dentro <span class="subtitle">(sumário prático)</span></h2>
-        
-        <div class="toc-grid">
-            <div class="toc-card">
-                <div class="toc-icon">✓</div>
-                <h3>Fundação do Delivery Rentável</h3>
-                <p>Modelo de operação, papéis e rotinas | Métricas mínimas (SLA, taxa de retrabalho, avaliação média)</p>
-            </div>
-            
-            <div class="toc-card">
-                <div class="toc-icon">✓</div>
-                <h3>Processo de Pedido a Porta</h3>
-                <p>Fluxo claro de etapas | Onde mais se perde tempo/dinheiro e como cortar</p>
-            </div>
-            
-            <div class="toc-card">
-                <div class="toc-icon">✓</div>
-                <h3>Padrão de Qualidade e Embalagem</h3>
-                <p>Checklist de montagem | Guia de apresentação | Redução de erros/reenvios</p>
-            </div>
-            
-            <div class="toc-card">
-                <div class="toc-icon">✓</div>
-                <h3>Logística e Rotas</h3>
-                <p>Janelas, agrupamento inteligente | Terceirizado vs. frota própria</p>
-            </div>
-            
-            <div class="toc-card">
-                <div class="toc-icon">✓</div>
-                <h3>Preço, Promo e Margem</h3>
-                <p>CMV do delivery | Taxas dos apps | Estratégias de combo que respeitam margem</p>
-            </div>
-            
-            <div class="toc-card">
-                <div class="toc-icon">✓</div>
-                <h3>Experiência & Pós-Venda</h3>
-                <p>Mensagens-chave | Avaliação e recuperação | Programas de recorrência simples</p>
-            </div>
-        </div>
-        
-        <div class="section-cta">
-            <a href="#" class="cta-button">Quero acessar agora (R$ 97)</a>
-        </div>
-    </section>
-
-    <!-- About Velora -->
-    <section class="about-section">
-        <div class="about-content">
-            <div class="about-image">
-                <img src="https://veloraebooks.com.br/wp-content/uploads/2025/12/velora-1.webp" alt="Velora">
-            </div>
-            <div class="about-text">
-                <h2>Quem é a <strong>Velora</strong></h2>
-                <p>A Velora nasceu para <strong>democratizar a boa gestão,</strong> levando o padrão das grandes empresas ao alcance de pequenos e médios negócios: com <strong>soluções claras, práticas e acessíveis.</strong></p>
-                <p>Nossos materiais unem <strong>experiência em administração e inovação</strong> para entregar <strong>valor real, rápido e sem complicação.</strong></p>
+            <div class="product-header">
+                <div class="product-image">
+                    <div class="product-icon-large">📱</div>
+                </div>
+                
+                <div class="product-info">
+                    <div class="product-badge">✅ Disponível Agora</div>
+                    <h1>Delivery de Sucesso</h1>
+                    <p class="product-tagline">O guia completo para estruturar, organizar e escalar seu negócio de delivery</p>
+                    
+                    <div class="product-price-box">
+                        <div class="price-main">
+                            <span class="price-label">Investimento único:</span>
+                            <span class="price-value">R$ 97,00</span>
+                        </div>
+                        <p class="price-subtitle">Acesso vitalício + Atualizações gratuitas</p>
+                    </div>
+                    
+                    <div class="product-ctas">
+                        <a href="#" class="btn-primary-large" onclick="trackEvent('CTA', 'click', 'Produto - Comprar Agora')">Comprar Agora</a>
+                        <p class="guarantee">🔒 Garantia de 7 dias • Pagamento 100% seguro</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Investment Section -->
-    <section class="investment-section">
-        <h2>Investimento</h2>
-        <p>Um pedido errado no sábado te custa mais que <strong>R$ 97.</strong> Esse e-book te ensina a parar de errar. E a ganhar o que tava perdendo, sem perceber.</p>
-        <p>Se uma única melhoria reduzir um reenvio, <strong>o e-book se paga.</strong></p>
-        <a href="#" class="cta-button">Quero transformar meu delivery agora</a>
+    <section class="product-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-main">
+                    <h2>O Que Você Vai Aprender</h2>
+                    
+                    <div class="module">
+                        <h3>📋 Módulo 1: Estruturação do Negócio</h3>
+                        <ul>
+                            <li>Como definir seu nicho e posicionamento</li>
+                            <li>Estrutura legal e documentação necessária</li>
+                            <li>Escolha de fornecedores estratégicos</li>
+                            <li>Montagem de cardápio lucrativo</li>
+                        </ul>
+                    </div>
+
+                    <div class="module">
+                        <h3>💰 Módulo 2: Gestão Financeira</h3>
+                        <ul>
+                            <li>Precificação estratégica (com planilha)</li>
+                            <li>Controle de custos e despesas</li>
+                            <li>Fluxo de caixa para delivery</li>
+                            <li>Indicadores de performance (KPIs)</li>
+                        </ul>
+                    </div>
+
+                    <div class="module">
+                        <h3>📱 Módulo 3: Marketing e Vendas</h3>
+                        <ul>
+                            <li>Estratégias para redes sociais</li>
+                            <li>Como usar iFood, Rappi e Uber Eats</li>
+                            <li>Fidelização de clientes</li>
+                            <li>Promoções que funcionam</li>
+                        </ul>
+                    </div>
+
+                    <div class="module">
+                        <h3>⚙️ Módulo 4: Operação Eficiente</h3>
+                        <ul>
+                            <li>Gestão de pedidos e entregas</li>
+                            <li>Controle de qualidade</li>
+                            <li>Treinamento de equipe</li>
+                            <li>Processos e checklists</li>
+                        </ul>
+                    </div>
+
+                    <div class="module">
+                        <h3>📈 Módulo 5: Crescimento e Escalabilidade</h3>
+                        <ul>
+                            <li>Como e quando expandir</li>
+                            <li>Abertura de novas unidades</li>
+                            <li>Franquias e parcerias</li>
+                            <li>Tecnologia e automação</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="details-sidebar">
+                    <div class="bonus-box">
+                        <h3>🎁 Bônus Inclusos</h3>
+                        <ul>
+                            <li>✓ Planilha de precificação</li>
+                            <li>✓ Planilha de fluxo de caixa</li>
+                            <li>✓ Templates de posts</li>
+                            <li>✓ Checklists operacionais</li>
+                            <li>✓ Contratos modelo</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>📖 Sobre o Ebook</h4>
+                        <ul class="info-list">
+                            <li><strong>Formato:</strong> PDF</li>
+                            <li><strong>Páginas:</strong> 150+</li>
+                            <li><strong>Idioma:</strong> Português</li>
+                            <li><strong>Atualizações:</strong> Gratuitas</li>
+                            <li><strong>Suporte:</strong> Email</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-box">
+                        <h4>Comece Agora</h4>
+                        <p>Acesso imediato após pagamento</p>
+                        <a href="#" class="btn-primary" onclick="trackEvent('CTA', 'click', 'Sidebar - Comprar')">Comprar por R$ 97</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- FAQ Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <h2>🛡️ Garantia de 7 Dias</h2>
+            <p>Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+        </div>
+    </section>
+
     <section class="faq-section">
-        <h2 class="section-title">Perguntas frequentes <span class="subtitle">(FAQ)</span></h2>
-        
-        <div class="faq-container">
-            <details class="faq-item">
-                <summary>1) Preciso ter equipe grande?</summary>
-                <div class="faq-content">
-                    <p>Não. O e-book foi pensado para operações <strong>enxutas</strong>. Dá pra aplicar mesmo sozinho. Você adapta os padrões ao seu tamanho.</p>
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Como recebo o ebook?</h3>
+                    <p>Imediatamente após a confirmação do pagamento, você recebe o link de download por email.</p>
                 </div>
-            </details>
-            
-            <details class="faq-item">
-                <summary>2) Isso vale para quem vende por app?</summary>
-                <div class="faq-content">
-                    <p>Sim. Os princípios funcionam para <strong>apps e canal próprio</strong> (WhatsApp/site).</p>
+
+                <div class="faq-item">
+                    <h3>Posso parcelar?</h3>
+                    <p>Sim! Aceitamos cartão de crédito em até 3x sem juros.</p>
                 </div>
-            </details>
-            
-            <details class="faq-item">
-                <summary>3) Tenho pouco tempo. Consigo aplicar?</summary>
-                <div class="faq-content">
-                    <p>Sim. O conteúdo é <strong>priorizado</strong>: você começa pelo que mais <strong>impacta lucro e avaliação</strong>.</p>
+
+                <div class="faq-item">
+                    <h3>Tem suporte?</h3>
+                    <p>Sim! Oferecemos suporte por email para tirar dúvidas sobre o conteúdo.</p>
                 </div>
-            </details>
-            
-            <details class="faq-item">
-                <summary>4) E se eu já tenho delivery rodando?</summary>
-                <div class="faq-content">
-                    <p>Melhor ainda. Há checklists para <strong>revisar o que existe</strong> e <strong>ajustar sem parar a operação</strong>.</p>
+
+                <div class="faq-item">
+                    <h3>Serve para qualquer tipo de delivery?</h3>
+                    <p>Sim! O conteúdo é aplicável para delivery de comida, bebidas, produtos e serviços.</p>
                 </div>
-            </details>
-            
-            <details class="faq-item">
-                <summary>5) Recebo alguma atualização?</summary>
-                <div class="faq-content">
-                    <p>Se houver alguma atualização relevante, você será avisado por e-mail.</p>
-                </div>
-            </details>
-        </div>
-        
-        <div class="section-cta">
-            <a href="#" class="cta-button">Quero transformar meu delivery agora</a>
+            </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="final-cta">
-        <h2>Última chamada</h2>
-        <p>Delivery que dá lucro não depende de sorte. Depende de quem para, olha e ajeita o básico. Se você quer parar de apagar incêndio e ver o caixa respirar, começa aqui.</p>
-        <p class="price"><strong>R$ 97 • Acesso imediato</strong></p>
-        <a href="#" class="cta-button large">Quero meu e-book e um delivery que dá lucro</a>
+        <div class="container">
+            <h2>Transforme Seu Delivery Hoje</h2>
+            <p>Junte-se a centenas de empreendedores que já estruturaram seus negócios com a Velora</p>
+            <a href="#" class="btn-primary-large" onclick="trackEvent('CTA', 'click', 'Final - Comprar Delivery')">Comprar por R$ 97,00</a>
+            <p class="guarantee-small">🔒 Compra 100% segura • Garantia de 7 dias</p>
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Velora Ebooks. Todos os direitos reservados.</p>
-        <p><a href="mailto:veloraebooks@gmail.com">veloraebooks@gmail.com</a></p>
+        <p><a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Footer')">veloraebooks@gmail.com</a></p>
+        <div class="social-links">
+            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" onclick="trackEvent('Social', 'click', 'Instagram Footer')">Instagram</a>
+            <a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Link')">Email</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 12px; color: #737373;">
+            Este site usa cookies para melhorar sua experiência. 
+            <a href="../../politica-privacidade.html" style="text-decoration: underline;">Política de Privacidade</a>
+        </p>
     </footer>
 </body>
 </html>
