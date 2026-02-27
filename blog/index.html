@@ -9,30 +9,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3FE6QFGK32');
-</script>
+    
+    <!-- Google Analytics + Events -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FE6QFGK32');
+      
+      function trackEvent(category, action, label) {
+        gtag('event', action, {
+          'event_category': category,
+          'event_label': label
+        });
+      }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo"><a href="../index.html">V</a></div>
         <ul class="nav-links">
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="../ebooks/index.html">Ebooks</a></li>
+            <li><a href="../index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Inicio')">Início</a></li>
+            <li><a href="../ebooks/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Ebooks')">Ebooks</a></li>
             <li><a href="index.html" class="active">Blog</a></li>
-            <li><a href="../sobre.html">Sobre</a></li>
-            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="../sobre.html" onclick="trackEvent('Navigation', 'click', 'Menu - Sobre')">Sobre</a></li>
+            <li><a href="../contato.html" onclick="trackEvent('Navigation', 'click', 'Menu - Contato')">Contato</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Blog <span class="highlight">Velora</span></h1>
@@ -40,11 +45,10 @@
         </div>
     </section>
 
-    <!-- Featured Article -->
     <section class="featured-section">
         <div class="container">
             <h2 class="section-title">Artigo em Destaque</h2>
-            <a href="artigos/como-aumentar-lucro-delivery.html" class="featured-card">
+            <a href="artigos/como-aumentar-lucro-delivery.html" class="featured-card" onclick="trackEvent('Blog', 'click', 'Featured - Lucro Delivery')">
                 <div class="featured-image">
                     <div class="featured-badge">📌 Destaque</div>
                     <div class="featured-icon">📱</div>
@@ -62,15 +66,23 @@
         </div>
     </section>
 
-    <!-- Articles Grid -->
     <section class="articles-section">
         <div class="container">
             <h2 class="section-title">Todos os Artigos</h2>
             
             <div class="articles-grid">
-                
-                <!-- Article 2 -->
-                <a href="artigos/5-erros-gestao-restaurante.html" class="article-card">
+                <a href="artigos/como-aumentar-lucro-delivery.html" class="article-card" onclick="trackEvent('Blog', 'click', 'Artigo - Lucro Delivery')">
+                    <div class="article-icon">📱</div>
+                    <div class="article-meta">
+                        <span class="article-category">Delivery</span>
+                        <span class="article-date">15 Fev 2026</span>
+                    </div>
+                    <h3>Como Aumentar o Lucro do Seu Delivery em 30 Dias</h3>
+                    <p>5 estratégias práticas para aumentar margem sem aumentar preços.</p>
+                    <span class="read-more-small">Ler mais →</span>
+                </a>
+
+                <a href="artigos/5-erros-gestao-restaurante.html" class="article-card" onclick="trackEvent('Blog', 'click', 'Artigo - 5 Erros')">
                     <div class="article-icon">🍽️</div>
                     <div class="article-meta">
                         <span class="article-category">Gestão</span>
@@ -81,87 +93,72 @@
                     <span class="read-more-small">Ler mais →</span>
                 </a>
 
-                <!-- Article 3 -->
-                <a href="artigos/marketing-digital-pequenos-negocios.html" class="article-card">
+                <a href="artigos/marketing-digital-pequenos-negocios.html" class="article-card" onclick="trackEvent('Blog', 'click', 'Artigo - Marketing Digital')">
                     <div class="article-icon">💡</div>
                     <div class="article-meta">
                         <span class="article-category">Marketing</span>
-                        <span class="article-date">10 Fev 2026</span>
+                        <span class="article-date">5 Mar 2026</span>
                     </div>
                     <h3>Marketing Digital para Pequenos Negócios</h3>
                     <p>Como criar uma presença online forte sem gastar muito.</p>
                     <span class="read-more-small">Ler mais →</span>
                 </a>
 
-                <!-- Article 4 -->
-                <a href="artigos/controle-financeiro-simplificado.html" class="article-card">
+                <a href="artigos/controle-financeiro-simplificado.html" class="article-card" onclick="trackEvent('Blog', 'click', 'Artigo - Controle Financeiro')">
                     <div class="article-icon">📊</div>
                     <div class="article-meta">
                         <span class="article-category">Finanças</span>
-                        <span class="article-date">10 Fev 2026</span>
+                        <span class="article-date">12 Mar 2026</span>
                     </div>
                     <h3>Controle Financeiro Simplificado</h3>
                     <p>Organize suas finanças em 15 minutos por dia.</p>
                     <span class="read-more-small">Ler mais →</span>
                 </a>
 
-                <!-- Article 5 -->
-                <a href="artigos/gestao-tempo-empreendedores.html" class="article-card">
+                <a href="artigos/gestao-tempo-empreendedores.html" class="article-card" onclick="trackEvent('Blog', 'click', 'Artigo - Gestao Tempo')">
                     <div class="article-icon">⚡</div>
                     <div class="article-meta">
                         <span class="article-category">Produtividade</span>
-                        <span class="article-date">10 Fev 2026</span>
+                        <span class="article-date">20 Mar 2026</span>
                     </div>
                     <h3>Gestão de Tempo para Empreendedores</h3>
                     <p>Técnicas para fazer mais em menos tempo.</p>
                     <span class="read-more-small">Ler mais →</span>
                 </a>
 
-                <!-- Article 6 - Placeholder -->
-                <a href="artigos/como-contratar-treinar-equipe.html" class="article-card">
+                <a href="artigos/como-contratar-treinar-equipe.html" class="article-card" onclick="trackEvent('Blog', 'click', 'Artigo - Gestao Equipe')">
                     <div class="article-icon">👥</div>
                     <div class="article-meta">
                         <span class="article-category">Equipe</span>
-                        <span class="article-date">10 Fev 2026</span>
+                        <span class="article-date">25 Mar 2026</span>
                     </div>
                     <h3>Como Contratar e Treinar sua Equipe</h3>
                     <p>Construa um time de alta performance.</p>
                     <span class="read-more-small">Ler mais →</span>
                 </a>
-
-                 <!-- Article 7 - Placeholder -->
-                <a href="#" class="article-card coming-soon">
-                    <div class="article-icon">⚡</div>
-                    <div class="article-meta">
-                        <span class="article-category">Placeholder</span>
-                        <span class="article-date">Em breve</span>
-                    </div>
-                    <h3>Placeholder</h3>
-                    <p>Placeholder.</p>
-                    <span class="read-more-small coming-soon-text">Em breve</span>
-                </a>
-
             </div>
         </div>
     </section>
 
-    <!-- Newsletter CTA -->
     <section class="newsletter-section">
         <div class="container">
             <h2>Receba novos artigos no seu email</h2>
             <p>Cadastre-se e seja o primeiro a receber conteúdos exclusivos sobre gestão e empreendedorismo.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_j0qNeicnpfhsZqSSL_0-jXs0njEUJnj-0891fOpj0Jy0fw/viewform" target="_blank" rel="noopener noreferrer" class="cta-button">Cadastrar Agora</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_j0qNeicnpfhsZqSSL_0-jXs0njEUJnj-0891fOpj0Jy0fw/viewform" target="_blank" rel="noopener noreferrer" class="cta-button" onclick="trackEvent('CTA', 'click', 'Newsletter - Blog')">Cadastrar Agora</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Velora Ebooks. Todos os direitos reservados.</p>
-        <p><a href="mailto:veloraebooks@gmail.com">veloraebooks@gmail.com</a></p>
+        <p><a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Footer')">veloraebooks@gmail.com</a></p>
         <div class="social-links">
-            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="mailto:veloraebooks@gmail.com">Email</a>
+            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" onclick="trackEvent('Social', 'click', 'Instagram Footer')">Instagram</a>
+            <a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Link')">Email</a>
         </div>
+        <p style="margin-top: 20px; font-size: 12px; color: #737373;">
+            Este site usa cookies para melhorar sua experiência. 
+            <a href="../politica-privacidade.html" style="text-decoration: underline;">Política de Privacidade</a>
+        </p>
     </footer>
 </body>
 </html>
