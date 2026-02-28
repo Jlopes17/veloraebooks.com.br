@@ -39,79 +39,83 @@
     </nav>
 
     <section class="hero">
-        <h1>Catálogo de <span class="highlight">Ebooks</span></h1>
-        <p class="subtitle">Ferramentas práticas de gestão para elevar seu negócio</p>
+        <div class="container">
+            <h1>Catálogo de <span class="highlight">Ebooks</span></h1>
+            <p class="hero-subtitle">Ferramentas práticas de gestão para elevar seu negócio</p>
+        </div>
     </section>
 
-    <section class="catalog">
-        <div class="catalog-grid">
-            <div class="product-card available">
-                <div class="product-badge">✅ Disponível</div>
-                <div class="product-icon">📱</div>
-                <h2>Delivery de Sucesso</h2>
-                <p class="product-description">Guia completo para estruturar, organizar e escalar seu negócio de delivery. Estratégias práticas para aumentar lucros e otimizar operações.</p>
-                
-                <div class="product-highlights">
-                    <div class="highlight-item">✓ Gestão de cardápio</div>
-                    <div class="highlight-item">✓ Controle financeiro</div>
-                    <div class="highlight-item">✓ Marketing digital</div>
-                    <div class="highlight-item">✓ Operação eficiente</div>
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card available">
+                    <div class="product-badge available-badge">✅ Disponível</div>
+                    <div class="product-icon">📱</div>
+                    <h3>Delivery de Sucesso</h3>
+                    <p class="product-description">Guia completo para estruturar, organizar e escalar seu negócio de delivery. Estratégias práticas para aumentar lucros e otimizar operações.</p>
+
+                    <div class="product-highlights">
+                        <div class="highlight-item">✓ Gestão de cardápio</div>
+                        <div class="highlight-item">✓ Controle financeiro</div>
+                        <div class="highlight-item">✓ Marketing digital</div>
+                        <div class="highlight-item">✓ Operação eficiente</div>
+                    </div>
+
+                    <div class="product-price-row">
+                        <span class="price-label">Investimento:</span>
+                        <span class="product-price">R$ 97,00</span>
+                    </div>
+
+                    <div class="product-actions">
+                        <a href="deliverydesucesso/index.html" class="product-button-outline" onclick="trackEvent('Product', 'click', 'Ver Detalhes - Delivery')">Ver Detalhes</a>
+                        <a href="deliverydesucesso/index.html" class="product-button" onclick="trackEvent('CTA', 'click', 'Catalogo - Comprar Delivery')">Comprar Agora</a>
+                    </div>
                 </div>
 
-                <div class="product-price">
-                    <span class="price-label">Investimento:</span>
-                    <span class="price-value">R$ 97,00</span>
+                <div class="product-card coming-soon">
+                    <div class="product-badge soon-badge">🚀 Em Breve</div>
+                    <div class="product-icon">💡</div>
+                    <h3>Marketing Digital Eficaz</h3>
+                    <p class="product-description">Aprenda a criar campanhas que convertem e atraem clientes qualificados para seu negócio, mesmo com orçamento limitado.</p>
+
+                    <div class="product-highlights">
+                        <div class="highlight-item">✓ Redes sociais</div>
+                        <div class="highlight-item">✓ Google Ads</div>
+                        <div class="highlight-item">✓ WhatsApp Business</div>
+                        <div class="highlight-item">✓ Conversão</div>
+                    </div>
+
+                    <div class="product-price-row">
+                        <span class="price-label">Investimento:</span>
+                        <span class="product-price">R$ 87,00</span>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="product-button disabled" disabled>Em Breve</button>
+                    </div>
                 </div>
 
-                <div class="product-actions">
-                    <a href="deliverydesucesso/index.html" class="btn-primary" onclick="trackEvent('Product', 'click', 'Ver Detalhes - Delivery')">Ver Detalhes</a>
-                    <a href="deliverydesucesso/index.html" class="btn-secondary" onclick="trackEvent('CTA', 'click', 'Catalogo - Comprar Delivery')">Comprar Agora</a>
-                </div>
-            </div>
+                <div class="product-card coming-soon">
+                    <div class="product-badge soon-badge">🚀 Em Breve</div>
+                    <div class="product-icon">📊</div>
+                    <h3>Gestão Financeira Descomplicada</h3>
+                    <p class="product-description">Controle total das suas finanças com métodos práticos e ferramentas essenciais. Fluxo de caixa, precificação e muito mais.</p>
 
-            <div class="product-card coming-soon">
-                <div class="product-badge soon">🚀 Em Breve</div>
-                <div class="product-icon">💡</div>
-                <h2>Marketing Digital Eficaz</h2>
-                <p class="product-description">Aprenda a criar campanhas que convertem e atraem clientes qualificados para seu negócio, mesmo com orçamento limitado.</p>
-                
-                <div class="product-highlights">
-                    <div class="highlight-item">✓ Redes sociais</div>
-                    <div class="highlight-item">✓ Google Ads</div>
-                    <div class="highlight-item">✓ WhatsApp Business</div>
-                    <div class="highlight-item">✓ Conversão</div>
-                </div>
+                    <div class="product-highlights">
+                        <div class="highlight-item">✓ Fluxo de caixa</div>
+                        <div class="highlight-item">✓ Precificação</div>
+                        <div class="highlight-item">✓ Indicadores</div>
+                        <div class="highlight-item">✓ Planilhas prontas</div>
+                    </div>
 
-                <div class="product-price">
-                    <span class="price-label">Investimento:</span>
-                    <span class="price-value">R$ 87,00</span>
-                </div>
+                    <div class="product-price-row">
+                        <span class="price-label">Investimento:</span>
+                        <span class="product-price">R$ 77,00</span>
+                    </div>
 
-                <div class="product-actions">
-                    <button class="btn-disabled" disabled>Em Breve</button>
-                </div>
-            </div>
-
-            <div class="product-card coming-soon">
-                <div class="product-badge soon">🚀 Em Breve</div>
-                <div class="product-icon">📊</div>
-                <h2>Gestão Financeira Descomplicada</h2>
-                <p class="product-description">Controle total das suas finanças com métodos práticos e ferramentas essenciais. Fluxo de caixa, precificação e muito mais.</p>
-                
-                <div class="product-highlights">
-                    <div class="highlight-item">✓ Fluxo de caixa</div>
-                    <div class="highlight-item">✓ Precificação</div>
-                    <div class="highlight-item">✓ Indicadores</div>
-                    <div class="highlight-item">✓ Planilhas prontas</div>
-                </div>
-
-                <div class="product-price">
-                    <span class="price-label">Investimento:</span>
-                    <span class="price-value">R$ 77,00</span>
-                </div>
-
-                <div class="product-actions">
-                    <button class="btn-disabled" disabled>Em Breve</button>
+                    <div class="product-actions">
+                        <button class="product-button disabled" disabled>Em Breve</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -113,6 +113,63 @@ nav {
     margin-top: 40px;
 }
 
+/* ===== PRODUCT HIGHLIGHTS ===== */
+.product-highlights {
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 16px 0;
+}
+
+.highlight-item {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    padding: 5px 0;
+    font-weight: 500;
+}
+
+/* ===== PRODUCT PRICE ROW ===== */
+.product-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.price-label {
+    font-size: 0.85rem;
+    color: var(--color-text-lighter);
+}
+
+/* ===== PRODUCT ACTIONS ===== */
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-button-outline {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    background: transparent;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid var(--color-primary);
+    font-family: var(--font-main);
+    cursor: pointer;
+}
+
+.product-button-outline:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
 .product-card {
     background: var(--color-white);
     border-radius: 16px;

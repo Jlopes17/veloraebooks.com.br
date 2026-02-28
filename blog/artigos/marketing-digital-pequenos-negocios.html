@@ -9,16 +9,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="artigo-styles.css">
+
+    <!-- Google Analytics + Events -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FE6QFGK32');
+
+      function trackEvent(category, action, label) {
+        gtag('event', action, {
+          'event_category': category,
+          'event_label': label
+        });
+      }
+    </script>
 </head>
 <body>
     <nav>
         <div class="logo"><a href="../../index.html">V</a></div>
         <ul class="nav-links">
-            <li><a href="../../index.html">Início</a></li>
-            <li><a href="../../ebooks/index.html">Ebooks</a></li>
-            <li><a href="../index.html">Blog</a></li>
-            <li><a href="../../sobre.html">Sobre</a></li>
-            <li><a href="../../contato.html">Contato</a></li>
+            <li><a href="../../index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Inicio')">Início</a></li>
+            <li><a href="../../ebooks/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Ebooks')">Ebooks</a></li>
+            <li><a href="../index.html" class="active" onclick="trackEvent('Navigation', 'click', 'Menu - Blog')">Blog</a></li>
+            <li><a href="../../sobre.html" onclick="trackEvent('Navigation', 'click', 'Menu - Sobre')">Sobre</a></li>
+            <li><a href="../../contato.html" onclick="trackEvent('Navigation', 'click', 'Menu - Contato')">Contato</a></li>
         </ul>
     </nav>
 
@@ -221,7 +237,7 @@
                 <div class="article-cta">
                     <h3>Quer Mais Estratégias?</h3>
                     <p>Nossos ebooks trazem guias completos e planilhas práticas para você aplicar no seu negócio.</p>
-                    <a href="../../ebooks/index.html" class="cta-button">Ver Ebooks</a>
+                    <a href="../../ebooks/index.html" class="cta-button" onclick="trackEvent('CTA', 'click', 'Artigo - Ver Ebooks')">Ver Ebooks</a>
                 </div>
             </div>
         </div>
@@ -253,11 +269,15 @@
 
     <footer class="site-footer">
         <p>&copy; 2026 Velora Ebooks. Todos os direitos reservados.</p>
-        <p><a href="mailto:veloraebooks@gmail.com">veloraebooks@gmail.com</a></p>
+        <p><a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Footer')">veloraebooks@gmail.com</a></p>
         <div class="social-links">
-            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="mailto:veloraebooks@gmail.com">Email</a>
+            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" onclick="trackEvent('Social', 'click', 'Instagram Footer')">Instagram</a>
+            <a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Link')">Email</a>
         </div>
+        <p style="margin-top: 20px; font-size: 12px; color: #737373;">
+            Este site usa cookies para melhorar sua experiência.
+            <a href="../../politica-privacidade.html" style="text-decoration: underline;">Política de Privacidade</a>
+        </p>
     </footer>
 </body>
 </html>
