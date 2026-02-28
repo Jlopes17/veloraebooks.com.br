@@ -15,26 +15,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Analytics + Events -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FE6QFGK32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FE6QFGK32');
 
-  gtag('config', 'G-3FE6QFGK32');
-</script>
+      function trackEvent(category, action, label) {
+        gtag('event', action, {
+          'event_category': category,
+          'event_label': label
+        });
+      }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="logo">V</div>
         <ul class="nav-links">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="ebooks/index.html">Ebooks</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a href="#inicio" class="active">Início</a></li>
+            <li><a href="ebooks/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Ebooks')">Ebooks</a></li>
+            <li><a href="blog/index.html" onclick="trackEvent('Navigation', 'click', 'Menu - Blog')">Blog</a></li>
+            <li><a href="sobre.html" onclick="trackEvent('Navigation', 'click', 'Menu - Sobre')">Sobre</a></li>
+            <li><a href="contato.html" onclick="trackEvent('Navigation', 'click', 'Menu - Contato')">Contato</a></li>
         </ul>
     </nav>
     
@@ -43,7 +49,7 @@
         <div class="hero-content">
             <h1>Transforme Seu Negócio com<br><span class="highlight">Gestão Acessível</span></h1>
             <p>Ferramentas de gestão profissional por um preço que cabe no seu bolso. Ebooks práticos desenvolvidos por especialistas para empreendedores que querem crescer.</p>
-            <a href="ebooks/index.html" class="cta-button">Explorar Ebooks</a>
+            <a href="ebooks/index.html" class="cta-button" onclick="trackEvent('CTA', 'click', 'Hero - Explorar Ebooks')">Explorar Ebooks</a>
         </div>
         <div class="hero-image">
             📚
@@ -59,23 +65,23 @@
                 <h3>Delivery de Sucesso</h3>
                 <p>Estratégias completas para dominar o mercado de delivery e aumentar seus lucros em 90 dias.</p>
                 <div class="product-price">R$ 97,00</div>
-                <a href="ebooks/deliverydesucesso/index.html" class="secondary-button">Ver Detalhes</a>
+                <a href="ebooks/deliverydesucesso/index.html" class="secondary-button" onclick="trackEvent('Product', 'click', 'Home - Ver Detalhes Delivery')">Ver Detalhes</a>
             </div>
-            
+
             <div class="product-card">
                 <div class="product-cover">💡</div>
                 <h3>Marketing Digital</h3>
                 <p>Aprenda a criar campanhas que convertem e atraem clientes qualificados para seu negócio.</p>
                 <div class="product-price">R$ 87,00</div>
-                <a href="ebooks/index.html" class="secondary-button">Em Breve</a>
+                <a href="ebooks/index.html" class="secondary-button" onclick="trackEvent('Product', 'click', 'Home - Em Breve Marketing')">Em Breve</a>
             </div>
-            
+
             <div class="product-card">
                 <div class="product-cover">📊</div>
                 <h3>Gestão Financeira</h3>
                 <p>Controle total das suas finanças com métodos práticos e ferramentas essenciais.</p>
                 <div class="product-price">R$ 77,00</div>
-                <a href="ebooks/index.html" class="secondary-button">Em Breve</a>
+                <a href="ebooks/index.html" class="secondary-button" onclick="trackEvent('Product', 'click', 'Home - Em Breve Financas')">Em Breve</a>
             </div>
         </div>
     </section>
@@ -85,7 +91,7 @@
         <div class="container">
             <h2 class="section-title">Quem É a Velora?</h2>
             <p class="about-text">A Velora nasceu da união entre experiência em administração e inteligência artificial. Criamos ferramentas digitais que democratizam o acesso à gestão de alta qualidade, tornando acessível a pequenos negócios o mesmo padrão das grandes empresas.</p>
-            <a href="sobre.html" class="learn-more">Conheça Nossa História →</a>
+            <a href="sobre.html" class="learn-more" onclick="trackEvent('Navigation', 'click', 'Home - Conheca Historia')">Conheça Nossa História →</a>
         </div>
     </section>
     
@@ -117,17 +123,21 @@
     <section class="cta-section">
         <h2>Eleve a Gestão do Seu Negócio</h2>
         <p>Ferramentas profissionais por um preço que cabe no seu bolso. Comece hoje com a Velora.</p>
-        <a href="ebooks/deliverydesucesso/index.html" class="cta-button">Começar Agora</a>
+        <a href="ebooks/deliverydesucesso/index.html" class="cta-button" onclick="trackEvent('CTA', 'click', 'Home - Comecar Agora')">Começar Agora</a>
     </section>
     
     <!-- Footer -->
     <footer id="contato">
         <p>&copy; 2026 Velora Ebooks. Todos os direitos reservados.</p>
-        <p><a href="mailto:veloraebooks@gmail.com">veloraebooks@gmail.com</a></p>
+        <p><a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Footer')">veloraebooks@gmail.com</a></p>
         <div class="social-links">
-            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="mailto:veloraebooks@gmail.com">Email</a>
+            <a href="https://instagram.com/veloraebooks" target="_blank" rel="noopener noreferrer" onclick="trackEvent('Social', 'click', 'Instagram Footer')">Instagram</a>
+            <a href="mailto:veloraebooks@gmail.com" onclick="trackEvent('Contact', 'click', 'Email Link')">Email</a>
         </div>
+        <p style="margin-top: 20px; font-size: 12px; color: #737373;">
+            Este site usa cookies para melhorar sua experiência.
+            <a href="politica-privacidade.html" style="text-decoration: underline;">Política de Privacidade</a>
+        </p>
     </footer>
 </body>
 </html>
