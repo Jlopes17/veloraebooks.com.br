@@ -10,6 +10,7 @@
     --color-text-lighter: #737373;
     --color-white: #ffffff;
     --font-main: 'JetBrains Mono', monospace;
+    --font-logo: 'Symphony', 'Times New Roman', serif;
 }
 
 /* ===== RESET ===== */
@@ -47,6 +48,7 @@ nav {
 .logo a {
     font-size: 32px;
     font-weight: 700;
+    font-family: var(--font-logo);
     color: var(--color-primary);
     text-decoration: none;
 }
