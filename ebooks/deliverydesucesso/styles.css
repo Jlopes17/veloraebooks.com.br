@@ -115,23 +115,38 @@ nav {
 }
 
 .product-image {
-    background: linear-gradient(135deg, var(--color-primary), #ffa366);
+    background: linear-gradient(135deg, var(--color-yellow), var(--color-primary));
     border-radius: 20px;
     padding: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 20px 50px rgba(255, 145, 77, 0.25);
+    aspect-ratio: 1 / 1;
 }
 
-.product-icon-large {
-    font-size: 10rem;
-    animation: float 3s ease-in-out infinite;
+.product-cover-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+.product-cover-title {
+    font-family: var(--font-main);
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    font-weight: 700;
+    color: var(--color-dark);
+    line-height: 1.35;
+}
+
+.product-cover-logo {
+    font-family: var(--font-logo);
+    font-size: 4rem;
+    color: var(--color-dark);
+    line-height: 1;
 }
 
 .product-info {
@@ -544,10 +559,6 @@ footer a:hover {
         padding: 40px;
     }
 
-    .product-icon-large {
-        font-size: 7rem;
-    }
-
     .details-grid {
         grid-template-columns: 1fr;
     }
@@ -584,10 +595,6 @@ footer a:hover {
 @media (max-width: 480px) {
     .product-image {
         padding: 30px;
-    }
-
-    .product-icon-large {
-        font-size: 5rem;
     }
 
     .btn-primary-large {
